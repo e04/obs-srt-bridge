@@ -19,6 +19,10 @@ This tool is designed to work together with the following tools. Please check th
   - Switches to the "offline" scene when connection is lost or experiencing issues
   - Configurable scene names via URL parameters
 
+## Download
+
+You can download prebuilt binaries from the [Releases](https://github.com/e04/obs-srt-bridge/releases/).
+
 ## Run
 
 ```bash

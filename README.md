@@ -3,6 +3,13 @@
 A bridge that allows OBS Studio to display live **SRT** (Secure Reliable Transport) connection statistics and automatically switch scenes based on connection health.  
 The project consists of a tiny Go server that embeds a React single-page application which is loaded in OBS as a _Browser Source_.
 
+## Related Tools
+
+This tool is designed to work together with the following tools. Please check them out as well:
+
+- **[srt-live-reporter](https://github.com/e04/srt-live-reporter)** - A proxy that provides SRT statistics via WebSocket
+- **[go-srtla](https://github.com/e04/go-srtla)** - A cross-platform SRTLA receiver
+
 ## Features
 
 - **Live SRT Statistics Display**: Real-time monitoring of SRT connection quality and statistics
@@ -38,12 +45,12 @@ Leave the process running while OBS is open.
 
 All query parameters are optional:
 
-| Parameter          | Default   | Meaning                                                                 |
-| ------------------ | --------- | ----------------------------------------------------------------------- |
-| `type`             | `simple`  | `simple`, `graph` or `none`                                             |
-| `wsport`           | `8888`    | Port where your SRT statistics WebSocket is listening (reader endpoint) |
-| `onlineSceneName`  | `ONLINE`  | Scene name to switch to when the connection is healthy                  |
-| `offlineSceneName` | `OFFLINE` | Scene name to switch to when the connection is lost or poor             |
+| Parameter          | Default   | Meaning                                                                                                                    |
+| ------------------ | --------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `type`             | `simple`  | `simple`, `graph` or `none`                                                                                                |
+| `wsport`           | `8888`    | Port where your SRT statistics WebSocket is listening (use [srt-live-reporter](https://github.com/e04/srt-live-reporter) ) |
+| `onlineSceneName`  | `ONLINE`  | Scene name to switch to when the connection is healthy                                                                     |
+| `offlineSceneName` | `OFFLINE` | Scene name to switch to when the connection is lost or poor                                                                |
 
 ## Build
 

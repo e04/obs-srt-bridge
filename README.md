@@ -44,8 +44,7 @@ Leave the process running while OBS is open.
 2. Enter the URL shown when you started the program, for example:
    - `http://localhost:9999/app?type=simple&wsport=8888&onlineSceneName=ONLINE&offlineSceneName=OFFLINE`
 3. **For automatic scene switching**: If you are using the `onlineSceneName` and `offlineSceneName` parameters, you must set the **Page permission** to **Advanced access** in the Browser Source properties. This allows the application to control OBS scene switching.
-
-> **Note**: The `onlineSceneName` and `offlineSceneName` parameters enable automatic scene switching based on connection status. When the SRT connection is healthy, OBS will automatically switch to the specified online scene. When the connection is lost or experiencing quality issues, it will switch to the offline scene.
+   - Also, please **uncheck** `Restart playback when source becomes active` in your UDP/SRT ingest media source properties to prevent playback issues during scene switching.
 
 All query parameters are optional:
 

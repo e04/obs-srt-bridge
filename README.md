@@ -61,7 +61,7 @@ All query parameters are optional:
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | simple | <img width="345" alt="スクリーンショット 2025-06-29 22 42 24" src="https://github.com/user-attachments/assets/ce8dd8b6-fb3b-44e8-aacc-f74f24d3b2b5" /> |
 | graph  | <img width="347" alt="スクリーンショット 2025-06-29 22 41 47" src="https://github.com/user-attachments/assets/bd77524d-f5ae-43ce-84b9-616bca1e6110" /> |
-| none   | (none, just switch scene)                                                                                                                              |
+| none   | (none, just for switching scene)                                                                                                                              |
 
 **Metric Explanations (left to right):**
 
@@ -85,9 +85,6 @@ $ cd ..
 # 2. Build the Go binary (this embeds the bundle produced above)
 $ go build -o obs-srt-bridge
 ```
-
-On **macOS** and **Linux** this will create an executable named `obs-srt-bridge`  
-On **Windows** the resulting file is `obs-srt-bridge.exe`.
 
 ## License
 

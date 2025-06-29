@@ -55,6 +55,20 @@ All query parameters are optional:
 | `onlineSceneName`  | `ONLINE`  | Scene name to switch to when the connection is healthy                                                                     |
 | `offlineSceneName` | `OFFLINE` | Scene name to switch to when the connection is lost or poor                                                                |
 
+### `type` Details
+
+| type   |                                                                                                                                                        |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| simple | <img width="345" alt="スクリーンショット 2025-06-29 22 42 24" src="https://github.com/user-attachments/assets/ce8dd8b6-fb3b-44e8-aacc-f74f24d3b2b5" /> |
+| graph  | <img width="347" alt="スクリーンショット 2025-06-29 22 41 47" src="https://github.com/user-attachments/assets/bd77524d-f5ae-43ce-84b9-616bca1e6110" /> |
+| none   | (none, just switch scene)                                                                                                                              |
+
+**Metric Explanations (left to right):**
+
+- Bitrate (Mbps)
+- RTT (ms)
+- Packet Loss (%)
+
 ## Build
 
 ```bash

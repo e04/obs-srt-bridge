@@ -10,6 +10,8 @@ This tool is designed to work together with the following tools. Please check th
 - **[srt-live-reporter](https://github.com/e04/srt-live-reporter)** - A proxy that provides SRT statistics via WebSocket
 - **[go-srtla](https://github.com/e04/go-srtla)** - A cross-platform SRTLA receiver
 
+Also, be sure to check out [this gist](https://gist.github.com/e04/3914d98d6d0a55c689ab724ac6896081).
+
 ## Features
 
 - **Live SRT Statistics Display**: Real-time monitoring of SRT connection quality and statistics

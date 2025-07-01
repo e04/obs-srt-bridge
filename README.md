@@ -29,7 +29,6 @@ You can download prebuilt binaries from the [Releases](https://github.com/e04/ob
 
 ```bash
 $ ./obs-srt-bridge -port 9999
-Browser Source URL: http://localhost:9999/app
 ```
 
 Leave the process running while OBS is open.

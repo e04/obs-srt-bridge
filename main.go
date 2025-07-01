@@ -5,6 +5,7 @@ import (
 
 	"flag"
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -19,17 +20,6 @@ func main() {
 	flag.Parse()
 	port := *portFlag
 
-	fmt.Printf("%s %s\n",
-		"Browser Source URL:",
-		fmt.Sprintf("http://localhost:%d/app", port),
-	)
-
-	go startWebAppServer(port)
-
-	select {}
-}
-
-func startWebAppServer(port int) {
 	http.HandleFunc("/app", func(w http.ResponseWriter, r *http.Request) {
 		if r.URL.Path == "/app" {
 			w.Write(browserSourceHtml)
@@ -37,5 +27,10 @@ func startWebAppServer(port int) {
 			http.NotFound(w, r)
 		}
 	})
-	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
+
+	fmt.Printf("Starting server on port %d...\n", port)
+	err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
+	if err != nil {
+		log.Fatalf("Failed to start server: %v", err)
+	}
 }

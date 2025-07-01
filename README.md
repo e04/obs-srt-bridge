@@ -14,12 +14,13 @@ Also, be sure to check out [this gist](https://gist.github.com/e04/3914d98d6d0a5
 
 ## Features
 
-- **Live SRT Statistics Display**: Real-time monitoring of SRT connection quality and statistics
-- **Multiple Display Types**: Choose between simple text display, graph visualization, or no display
-- **Automatic Scene Switching**: Automatically switches OBS scenes based on connection health
-  - Switches to the "online" scene when SRT connection is stable and healthy
-  - Switches to the "offline" scene when connection is lost or experiencing issues
-  - Configurable scene names via URL parameters
+- **Live SRT Statistics Display**: Real-time monitoring of SRT connection quality and statistics.
+- **Multiple Display Types**: Choose between simple text display, graph visualization, or no display.
+- **Automatic Scene Switching**: Automatically switches OBS scenes based on connection health.
+  - Switches to the "online" scene when SRT connection is stable and healthy.
+  - Switches to the "offline" scene when connection is lost or experiencing issues.
+  - Configurable scene names via URL parameters.
+- **Reliable Scene Switching Based on Packet Loss**: Unlike tools that only monitor bitrate, this bridge utilizes detailed SRT statistics such as packet loss. This enables more intelligent and accurate switching decisions, correctly identifying connection health issues that simpler methods might miss.
 
 ## Download
 

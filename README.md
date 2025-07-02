@@ -3,14 +3,11 @@
 A bridge that allows OBS Studio to display live **SRT** (Secure Reliable Transport) connection statistics and automatically switch scenes based on connection health.  
 The project consists of a tiny Go server that embeds a React single-page application which is loaded in OBS as a _Browser Source_.
 
-## Related Tools
+## The `go-irl` Stack
 
-This tool is designed to work together with the following tools. Please check them out as well:
+`obs-srt-bridge` is a core component of **[go-irl](https://github.com/e04/go-irl)**, a complete, modern streaming stack designed for robust IRL broadcasting.
 
-- **[srt-live-reporter](https://github.com/e04/srt-live-reporter)** - A proxy that provides SRT statistics via WebSocket
-- **[go-srtla](https://github.com/e04/go-srtla)** - A cross-platform SRTLA receiver
-
-Also, be sure to check out [this gist](https://gist.github.com/e04/3914d98d6d0a55c689ab724ac6896081).
+If you are looking for an easier setup with more advanced features, consider using `go-irl`. It bundles `obs-srt-bridge` with other essential tools (`srt-live-reporter`, `go-srtla`) and provides a simple, one-command launcher.
 
 ## Features
 

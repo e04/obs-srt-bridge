@@ -76,9 +76,9 @@ jobs:
       - name: Create ZIP archives
         run: |
           cd dist
-          zip -j obs-srt-bridge-macos-arm64.zip macos-arm64/obs-srt-bridge
-          zip -j obs-srt-bridge-linux-x64.zip  linux-x64/obs-srt-bridge
-          zip -j obs-srt-bridge-linux-arm64.zip linux-arm64/obs-srt-bridge
+          zip -j obs-srt-bridge-macos-arm64.zip macos-arm64/obs-srt-bridge ../README.md
+          zip -j obs-srt-bridge-linux-x64.zip  linux-x64/obs-srt-bridge ../README.md
+          zip -j obs-srt-bridge-linux-arm64.zip linux-arm64/obs-srt-bridge ../README.md
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -126,7 +126,7 @@ jobs:
         run: |
           mkdir dist\windows-x64
           go build -o dist\windows-x64\obs-srt-bridge.exe
-          Compress-Archive -Path dist\windows-x64\obs-srt-bridge.exe -DestinationPath dist\obs-srt-bridge-windows-x64.zip
+          Compress-Archive -Path dist\windows-x64\obs-srt-bridge.exe, README.md -DestinationPath dist\obs-srt-bridge-windows-x64.zip
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

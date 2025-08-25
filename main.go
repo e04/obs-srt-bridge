@@ -28,7 +28,8 @@ func main() {
 		}
 	})
 
-	fmt.Printf("Starting server on port %d...\n", port)
+	fmt.Printf("Browser Source address: http://localhost:%d\n", port)
+
 	err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
 	if err != nil {
 		log.Fatalf("Failed to start server: %v", err)
